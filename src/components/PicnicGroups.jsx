@@ -24,12 +24,12 @@ export const PicnicGroups = ({picnic_groups,name, id, createNewGroup})=>(
 );
 
 function mapStateToProps(state, ownProps){
-    let parkID=ownProps.id;
+    let groupID=ownProps.id;
 
     return{
         name: ownProps.name,
-        id: ownProps.parkID,        
-        picnic_groups:state.picnic_groups.filter(picnic_group=> picnic_group.park===parkID)
+        id: ownProps.groupID,        
+        picnic_groups:state.picnic_groups.filter(picnic_group=> picnic_group.park===groupID)
     }
 }
 

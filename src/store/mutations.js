@@ -9,26 +9,29 @@ export const requestGroupCreation = (groupID)=>({
     groupID
 });
 
-export const createGroup = (groupID,  parkID)=>({
+export const createGroup = (p_groupID, groupID, parkID)=>({
     type:CREATE_GROUP,
+    p_groupID,
     groupID,  
-    parkID
+    parkID,
+    
+
 });
 
 export const setJoin = (id, isComplete = true)=>({
     type:SET_JOIN,
-    groupID:id,
+    p_groupID:id,
     isComplete
 });
 
-export const setGroup = (groupID, parkID)=>({
+export const setGroup = (p_groupID, groupID)=>({
     type:SET_GROUP,
-    groupID,
-    parkID
+    p_groupID,
+    groupID
 });
 
 export const setGroupName = (groupID, name)=>({
     type:SET_GROUP_NAME,
-    groupID,
+    p_groupID,
     name
 });
