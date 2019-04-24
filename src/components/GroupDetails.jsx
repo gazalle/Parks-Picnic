@@ -8,6 +8,7 @@ export const GroupDetails = ({
         items,
         picnic_groups,
         isAvailable,
+        isPark,
 
         setJoin
 }) =>(
@@ -29,15 +30,15 @@ function mapStateToProps(state,ownProps){
     let id = ownProps.match.params.id;
     let groups = state.picnic_groups.find(picnic_group=>picnic_group.id === id);
     let items = state.items.filter(item=>item.picnic_group === id);
-    let isPark = state.session.id === picnic_group.park;
+    //let isPark = state.session.id === picnic_group.park;
     let p_groups = state.picnic_groups;
 
     return {
         id,
         groups,
         items,
-        isPark,
-        sessionID: state.session.id,
+        //isPark,
+        //sessionID: state.session.id,
         isAvailable: picnic_group.isAvailable,
         p_groups
     }

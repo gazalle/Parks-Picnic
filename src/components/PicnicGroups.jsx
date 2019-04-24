@@ -11,7 +11,7 @@ export const PicnicGroups = ({picnic_groups,name, id, createNewGroup})=>(
         </h3>
         <div>
           {picnic_groups.map(picnic_group=> (
-              <Link to={`/groups/:id/${picnic_group.id}`} key={picnic_group.id}>
+              <Link to={`/groups/${picnic_group.id}`} key={picnic_group.id}>
                 <div > 
                     {picnic_group.name}                 
                </div>   </Link>            

@@ -28,7 +28,9 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
     "history": "^4.9.0",
     "mongodb": "^3.2.3",
     "redux": "^4.0.1",
@@ -37,6 +39,8 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
