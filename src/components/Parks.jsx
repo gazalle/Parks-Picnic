@@ -1,13 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import { ConnectedPicnicGroups} from './PicnicGroups';
 
 export const Parks = ({parks})=>(
     <div>
-        <h2>Parks</h2>
+       
         {parks.map(park=> (
-            <div> 
-                {park.name}
-            </div>
+            <ConnectedPicnicGroups id={park.id} name={park.name}/>
         ))}
     </div>
 );

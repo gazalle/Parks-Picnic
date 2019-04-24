@@ -24,13 +24,13 @@ export const appEntities = {
         isAvailable: false
         
     },{
-        name:"Group 1",
+        name:"Group 2",
         id:"G2",
         park:"P1",
         slots: "unlimited",
         isAvailable: true
     },{
-        name:"Group 1",
+        name:"Group 3",
         id:"G3",
         park:"P3",
         slots: "limited to 10",
