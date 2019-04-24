@@ -20,7 +20,7 @@ export const Main = ()=>(
             />
              <Route 
                 exact
-                path="/groups/id"
+                path="/groups/:id"
                 render={({match})=> (<ConnectedGroupDetails match={match} />)}
             />
  
