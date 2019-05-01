@@ -46,12 +46,12 @@ app.get('/',(req,res)=>{
 
 app.post('/group/new',async (req,res)=>{
     let task = req.body.task;
-    await addNewTask(task);
+    await addNewGroup(task);
     res.status(200).send();
 });
 
 app.post('/group/update',async (req,res)=>{
     let task = req.body.task;
-    await updateTask(task);
+    await updateGroup(task);
     res.status(200).send();
 });
