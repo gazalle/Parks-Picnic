@@ -4,7 +4,7 @@ db.parks.insert([
         distance:3,
         groups:[{
             name:"Cool Group",
-            items:["book", "grill", "drinks"],
+            items:[{name:"book"}, {name:"grill"}, {name:"drinks"}],
             isAvailable: true,
             members:[
                 {
@@ -20,7 +20,7 @@ db.parks.insert([
         },
         {
             name:"Nice Group",
-            items:["book", "tea", "sweets"],
+            items:[{name:"book"}, {name:"tea"}, {name:"sweets"}],
             isAvailable: true,
             members:[
                 {
@@ -42,7 +42,7 @@ db.parks.insert([
         distance:4,
         groups:[{
             name:"Cool Group",
-            items:["book", "grill", "drinks"],
+            items:[{name:"book"}, {name:"grill"}, {name:"drinks"}],
             isAvailable: true,
             members:[
                 {
@@ -59,7 +59,7 @@ db.parks.insert([
         distance:3,
         groups:[{
             name:"Game Group",
-            items:["gameboards", "drink", "snack"],
+            items:[{name:"gameboards"}, {name:"drink"}, {name:"snack"}],
             isAvailable: true,
             members:[
                 {
