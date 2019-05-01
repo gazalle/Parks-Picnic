@@ -12,14 +12,14 @@ mongoose.promise = global.Promise;
 //Configure isProduction variable
 const isProduction = process.env.NODE_ENV === 'production';
 
-//Initiate our app
+//Initiate the app
 const app = express();
 
-//Configure our app
+//Express middleware
 app.use(cors());
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // For parsing application/json
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'picnic_parks', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
@@ -33,10 +33,19 @@ mongoose.connect('mongodb://localhost:27017/parks', {
 });
 mongoose.set('debug', true);
 
-//Models & routes
+//Models anc configs
 require('./models/Users');
+require('./models/Parks');
 require('./config/passport');
-app.use(require('./routes'));
+
+// Import APIs (routes)
+const parksRouter = require('./routes/api/parks');
+const usersRouter = require('./routes/api/users')
+
+// Set up express routes
+//app.use(require('./routes'));
+app.use('/api/parks', parksRouter);
+app.use('/api/users', usersRouter);
 
 //Error handlers & middlewares
 if(!isProduction) {
