@@ -4,13 +4,7 @@
   "description": "app for people to go to picnic",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
-    "dev": "webpack-dev-server --open",
-    "initialize": "babel-node src/server/initialize-db",
-    "server": "babel-node src/server/server",
-    "server-test": "babel-node src/server/server.spec",
-    "start-dev": "concurrently \"npm run server\" \"npm run dev\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,32 +16,20 @@
     "url": "https://github.com/gazalle/Parks-Picnic/issues"
   },
   "homepage": "https://github.com/gazalle/Parks-Picnic#readme",
-  "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.4.0",
-    "axios": "^0.18.0",
-    "babel-loader": "^8.0.5",
-    "concurrently": "^4.1.0",
-    "history": "^4.9.0",
-    "mongodb": "^3.2.3",
-    "redux": "^4.0.1",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
-  },
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
+    "connect": "^3.6.6",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "errorhandler": "^1.5.0",
     "express": "^4.16.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.0.2",
-    "react-router-dom": "^5.0.0",
-    "redux-logger": "^3.0.6",
-    "redux-saga": "^1.0.2",
-    "uuid": "^3.3.2"
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.5",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
   }
 }
