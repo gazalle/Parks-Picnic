@@ -33,6 +33,9 @@ mongoose.connect('mongodb://localhost:27017/parks', {
 });
 mongoose.set('debug', true);
 
+//Models & routes
+require('./models/Users');
+
 //Error handlers & middlewares
 if(!isProduction) {
     app.use((err, req, res, next) => {
