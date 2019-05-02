@@ -16,6 +16,8 @@ A backend application for people who wants to go to picnic.
     "password": String
   }
 }`
+* Set following options in POSTMAN headers section
+  * `Content-Type: application/json`
 
 * **Method:**
 
@@ -34,11 +36,21 @@ A backend application for people who wants to go to picnic.
 * **Sample Call:**
 
   * `/api/users`
+  * **with following body:** `{
+  "user": {
+    "email": "gazelle@gmail.com",
+    "password": "test"
+  }
+}`
 
   **Logining in with created account**
 * **URL**
 
   * `/api/users/login`
+
+  * Set following options in POSTMAN headers section
+  * `Authorization: Token [tokenValue]`
+  * `Content-Type: application/json`
 
 * **Method:**
 
@@ -62,6 +74,12 @@ A backend application for people who wants to go to picnic.
 * **Sample Call:**
 
   * `/api/users/login`
+  * **with following body:** `{
+    "email": "gazelle@gmail.com",
+    "password": "test"
+}`
+* Set following options in POSTMAN headers section
+  * `Content-Type: application/json`
 
  ## Application endpoints 
 
@@ -110,14 +128,18 @@ A backend application for people who wants to go to picnic.
   * `/api/parks?distance=3`
 
   **Getting available groups with selected parks**
-  Since this route is protected therefore a token must be added to the request header
+  * Since this route is protected therefore a token must be added to the request header. [You get the token after login or sign up]
 * **URL**
 
   * `/api/parks/:parkId`
+   * Set following options in POSTMAN headers section
+  * `Authorization: Token [tokenValue]`
+  * `Content-Type: application/json`
 
 * **Method:**
 
   * `GET`
+
 
 * **Success Response:**
 
@@ -153,6 +175,9 @@ A backend application for people who wants to go to picnic.
 * **Sample Call:**
 
   * `/api/parks/5cca01f1fec10ebf32db84c7`
+  * Set following options in POSTMAN headers section
+  * `Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyZGVsamFjLmFudG9uaW9AZ21haWwuY29tIiwiaWQiOiI1YjBmMzg3NzJjNDY5MTBmMTZhMDU4YzUiLCJleHAiOjE1MzI5MDgxNTEsImlhdCI6MTUyNzcyNDE1MX0.4TWc1TzY6zToHx_O1Dl2I9Hf9krFTqPkNLHI5U9rn8c`
+  * `Content-Type: application/json`
 
 **Note:**  Make sure GET request has Headers; Key:Token and Content-type:application/json. POST request has Headers; content-type:application/json. In case of using POSTMAN for testing APIs
 
