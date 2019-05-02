@@ -157,6 +157,11 @@ A backend application for people who wants to go to picnic.
 **Note:**  Make sure GET request has Headers; Key:Token and Content-type:application/json. POST request has Headers; content-type:application/json. In case of using POSTMAN for testing APIs
 
 ## Usage: Two options
+
+**Note:**  First use parksData.js for initial data inside mongoDB:
+* `mongo parks < parksData.js`
+* here "parks" is the database name created for the app
+
 1. To run the application use:
 * `clone https://github.com/gazalle/Parks-Picnic.git`
 * `cd Parks-Picnic`
@@ -165,8 +170,11 @@ A backend application for people who wants to go to picnic.
 
 Server runs on http://localhost:8000/
 
-2. or App can be run using the docker 
+2. or App can be run using the docker
 * `clone https://github.com/gazalle/Parks-Picnic.git`
 * `cd Parks-Picnic`
 * `docker build -t <your username>/node-picnic-parks-app .`
 * `docker run -p 4000:8000 -d <your username>/node-picnic-parks-app`
+
+
+
