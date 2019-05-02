@@ -166,5 +166,7 @@ A backend application for people who wants to go to picnic.
 Server runs on http://localhost:8000/
 
 2. or App can be run using the docker 
-
-`docker-compose up --build`
+`clone https://github.com/gazalle/Parks-Picnic.git`
+`cd Parks-Picnic`
+`docker build -t <your username>/node-picnic-parks-app .`
+`docker run -p 4000:8000 -d <your username>/node-picnic-parks-app`
