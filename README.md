@@ -158,15 +158,15 @@ A backend application for people who wants to go to picnic.
 
 ## Usage: Two options
 1. To run the application use:
-`clone https://github.com/gazalle/Parks-Picnic.git`
-`cd Parks-Picnic`
-`npm install`
-`npm start`
+* `clone https://github.com/gazalle/Parks-Picnic.git`
+* `cd Parks-Picnic`
+* `npm install`
+* `npm start`
 
 Server runs on http://localhost:8000/
 
 2. or App can be run using the docker 
-`clone https://github.com/gazalle/Parks-Picnic.git`
-`cd Parks-Picnic`
-`docker build -t <your username>/node-picnic-parks-app .`
-`docker run -p 4000:8000 -d <your username>/node-picnic-parks-app`
+* `clone https://github.com/gazalle/Parks-Picnic.git`
+* `cd Parks-Picnic`
+* `docker build -t <your username>/node-picnic-parks-app .`
+* `docker run -p 4000:8000 -d <your username>/node-picnic-parks-app`
