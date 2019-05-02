@@ -191,6 +191,7 @@ A backend application for people who wants to go to picnic.
 * `clone https://github.com/gazalle/Parks-Picnic.git`
 * `cd Parks-Picnic`
 * `npm install`
+* `npm install -g nodemon`
 * `npm start`
 
 Server runs on http://localhost:8000/
